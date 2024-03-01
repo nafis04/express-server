@@ -7,9 +7,8 @@ app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
 app.get("/status", (request, response) => {
-  console.log(request.body);
   const status = { status: "Running" };
-  response.send(status);
+  response.json(status);
 });
 
 app.listen(PORT, () => {
